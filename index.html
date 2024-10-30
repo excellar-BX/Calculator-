@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>Calculator app</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <main>
+        <div class="container">
+            
+            <input id="screen" readonly/>
+            
+            <div class="buttons">
+                
+        <span id="clearAll" onclick="clearScreen()"  class="button operator">AC</span>
+        <span id="clear" onclick="backspace()" class="button operator">C</span>
+        <span id="mod" onclick="appendToScreen('%')" class="button operator">%</span>
+        <span id="divide" onclick="appendToScreen('/')" class="button operator">÷</span>
+              
+        <span id="7" onclick="appendToScreen('7')" class="button">7</span>
+        <span id="8" onclick="appendToScreen('8')" class="button">8</span>
+        <span id="9" onclick="appendToScreen('9')" class="button">9</span>
+        <span id="multiply" onclick="appendToScreen('*')" class="button operator">×</span>
+
+                 
+                
+        <span id="4" onclick="appendToScreen('4')" class="button">4</span>
+        <span id="5" onclick="appendToScreen('5')" class="button">5</span>
+        <span id="6" onclick="appendToScreen('6')" class="button">6</span>
+        <span id="minus" onclick="appendToScreen('-')" class="button operator">-</span>
+                
+        <span id="1" onclick="appendToScreen('1')" class="button" >1</span>
+        <span id="2" onclick="appendToScreen('2')" class="button">2</span>
+        <span id="3" onclick="appendToScreen('3')" class="button">3</span>
+        <span id="add" onclick="appendToScreen('+')" class="button operator">+</span>
+                
+                
+        <span id="zero" onclick="appendToScreen('0')" class="button">0</span>
+        <span id="twoZero" onclick="appendToScreen('00')" class="button">00</span>
+        <span id="dot" onclick="appendToScreen('.')" class="button">.</span>
+        <span id="equal" onclick="calculate()" class="button operator equal">=</span>
+            </div>
+        </div>
+        </main>
+        
+<script src="index.js"></script>
+</body>
+</html>
