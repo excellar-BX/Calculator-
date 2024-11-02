@@ -7,7 +7,9 @@ body {
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     font-family: 'Arial', sans-serif;
 }
-
+main h1{
+    text-align:center;
+}
 .container {
     width: 100%;
     max-width: 350px;
