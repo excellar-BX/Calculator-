@@ -1,59 +1,100 @@
-body{
+body {
     margin: 0;
-    display:flex;
+    display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Arial', sans-serif;
 }
-.container{
+
+.container {
     width: 100%;
-    background-color: black;
+    max-width: 350px;
+    padding: 20px;
+    background: #1e272e;
     border-radius: 15px;
-    color: white;
-    height: 500px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
+    color: #ecf0f1;
 }
-#screen{
+
+#screen {
     width: 100%;
-    height: 100px;
-    font-size: 25px;
+    height: 80px;
+    font-size: 30px;
     text-align: right;
-    display: block;
-    color: white;
-  user-select: none;
+    padding: 10px;
+    color: #fff;
     border: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
     outline: none;
-    margin: 0px auto 20px auto;
-    background-color: rgba(255,255,255,0.4);
 }
-.buttons{
+
+.buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
-    margin: auto 10px;
-    justify-content: center;
-    font-size: 20px;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 20px 0;
+    font-size: 24px;
     font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    color: #ecf0f1;
+    background: #3b3b98;
+    transition: transform 0.1s, background 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #575fcf;
+    transform: scale(1.05);
+}
+
+.button:active {
+    background: #1e272e;
+}
+
+.button.operator {
+    background: #ff6b6b;
+}
+
+.button.operator:hover {
+    background: #ff4d4d;
+}
+
+.button.equal {
+    background: #34ace0;
+    color: #fff;
+}
+
+.button.equal:hover {
+    background: #227093;
+}
+
+/* Mobile Fullscreen Adjustments */
+@media (max-width: 600px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 0;
+        box-shadow: none;
+    }
     
-}
-.button{
-    padding: 20px 10px;
-    background:rgba(128, 128, 128, 0.3);
-    border-radius: 10px ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.button:hover{
-    background:rgba(128, 128, 128, 0.5);
-}
-.button.operator{
-    color: rgb(255, 165,0);
-}
-.button.equal:hover{
-    background: rgba(255, 165,0, 1);;
-}
-.equal.button{
-    background-color: rgba(255, 165,0, 0.9);;
-    color: white;
+    #screen {
+        height: 15vh;
+        font-size: 24px;
+    }
+    
+    .button {
+        padding: 10px 0;
+        font-size: 20px;
+    }
 }

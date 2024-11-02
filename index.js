@@ -7,7 +7,7 @@ if(screen.value === '') {
 
 
  function appendToScreen(input){
-     if(screen.value === '0' || screen.value === '00' ){
+     if(screen.value === '0'){
 		screen.value = '';
 	}
 	if(screen.value === "SyntaxError" || screen.value === "ReferenceError" || screen.value === "NaN"){
